@@ -1,0 +1,50 @@
+#header{
+	height: 30px;
+	#logo{
+		height: 50px;
+		width: 50px;
+		float: left;
+		margin-left: 100px;
+		margin-right: 50px;
+	}
+	#menu2{
+		display: none;
+		text-align: right;
+		padding-right: 5px;
+		padding-top: 5px;
+		font-size: 24px;
+	}
+	#menu{
+		ul{
+			list-style: none;
+			li{
+				float: left;
+				margin-top: 15px;
+			}
+		}
+		.opciones{
+			margin-left: 50px;
+			li {
+				margin-right: 15px;
+			}
+		}
+		.inicio{
+			margin-right: 50px;
+			float: right;
+			li:last-child{
+				margin-left: 30px;
+			}
+		}
+	}
+	@media only screen and (max-width: 600px) {
+		#logo{
+			margin-left: 10px;
+		}
+        #menu{
+			display: none;
+		}
+		#menu2{
+			display: block;
+		}
+    }
+}

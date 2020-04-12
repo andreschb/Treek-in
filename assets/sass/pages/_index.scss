@@ -1,0 +1,136 @@
+#banner{
+    background-image: url("../images/bg-hero.svg");
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .texto {
+        margin-top: 200px;
+        margin-left: 100px;
+        width: 400px;
+        font-size: 18px;
+    }
+    @media only screen and (max-width: 600px) {
+        display: inline-block;
+        margin-top: 150px;
+        height: 250px;
+        .texto{
+            margin-top: -150px;
+            margin-left: initial;
+            width: initial;
+            padding: 15px 15px;
+            text-align: center;
+        }
+    }
+}
+
+.titulo{
+    text-align: center;
+}
+#caracteristicas{
+    height: 180px;
+    max-width: 800px;
+    margin: auto;
+    #grafica{
+        background-image: url("../images/bar-graph.svg");
+        height: 180px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 300px;
+        float: left;
+        margin-right: 80px;
+        animation-name: grafica;
+        animation-duration: 4s;
+        @media only screen and (max-width: 600px) {
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        #texto{
+            padding: 15px 15px;
+            h1{
+                text-align: center;
+            }
+        }
+    }
+    @keyframes grafica {
+        from {opacity: 0.2;}
+        to {opacity: 1;}
+      }
+}
+#precios{
+    background-image: url("../images/bg-price.svg");
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    @media only screen and (max-width: 600px) {
+        margin-top: 200px;
+    }
+    .caja-cuadros{
+        max-width: 800px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        .cuadro{
+            margin-top: 300px;
+            float: left;
+            background-color: $white;
+            height: 320px;
+            padding: 10px 15px;
+            .caja-boton{
+                border-top: 1px solid $black;
+                padding-top: 10px;
+            }
+            .caja-boton.primero{
+                margin-top: 100px;
+            }
+            h1{
+                border-bottom: 1px solid $black;
+            }
+            li{
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+        .cuadro.primero{
+            margin-right: 50px;
+        }
+        button{
+            width: 90%;
+            margin: auto;
+            display: block;
+            padding: 10px 10px;
+        }
+    }
+    .titulo{
+        position: absolute;
+        margin-top: 220px;
+        width: 100%;
+        color: $white;   
+    }
+    @media only screen and (max-width: 600px) {
+        height: initial;
+        background-image: none;
+        margin-top: 170px;
+        .caja-cuadros{
+            flex-direction: column;
+            background-color: #323644;
+            .cuadro.primero{
+                margin: 0px 20px;
+            }
+            .cuadro.ultimo{
+                margin: 20px 20px 0px 20px;
+            }
+        }
+        .titulo{
+            background-image: url("../images/bg-price.svg");
+            background-repeat: no-repeat;
+            background-size: 100%;  
+            margin-top: initial ;
+            position: relative;
+            height: 100px;
+            h1{
+                padding-top: 50px;
+            }
+        }
+    }
+}
